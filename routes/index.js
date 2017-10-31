@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 router.post('/resTest', function(req, res){
-    res.writeHead(200, {'Content-Type': 'text/html'});
+    //res.writeHead(200, {'Content-Type': 'text/html'});
     res.send("Hey!" + req.name);
 });
 
