@@ -25,7 +25,7 @@ router.post('/', function(req, res){
 
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        db.collection("ORDERS").find({name: JSON.stringify(req.param('username'))}).toArray(function (err, docs) {
+        db.collection("ORDERS").find({name: req.param('username')}).toArray(function (err, docs) {
             if (err) throw err;
             docs.forEach(function (doc) {
                 res.send(doc['name'] + " " + doc['order']);
