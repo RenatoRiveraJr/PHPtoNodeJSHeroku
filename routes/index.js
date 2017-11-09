@@ -6,21 +6,19 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 router.post('/', function(req, res){
-    //res.writeHead(200, {'Content-Type': 'text/html'});
     var MongoClient = require('mongodb').MongoClient;
-    var url = "mongodb://heroku_1jbzqctc:&7c4fPwVBcUDTcu1@ds251245.mlab.com:51245/heroku_1jbzqctc";
+    var url = "mongodb://<username>:<password>@ds251245.mlab.com:51245/heroku_1jbzqctc";
+
 
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        var query = { name: req.param('username') };
-        db.collection("ORDERS").find(query).toArray(function(err, result) {
+        db.collection("ORDERS").find({name: req.param('username')}).toArray(function (err, docs) {
             if (err) throw err;
-            res.send("Hey! " + req.param('username') + "Here is your order: " +
-            result);
-            db.close();
+            docs.forEach(function (doc) {
+                res.send(doc['name'] + " " + doc['order']);
+            });
         });
     });
-
 });
 
 module.exports = router;
