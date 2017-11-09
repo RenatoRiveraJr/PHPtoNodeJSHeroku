@@ -12,11 +12,14 @@ router.post('/', function(req, res){
 
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        db.collection("ORDERS").findOne({}, function(err, result) {
+
+        /*db.collection("ORDERS").findOne({}, function(err, result) {
             if (err) throw err;
             res.send(result.name);
             db.close();
-        });
+        });*/
+        res.send("Hey!" + req.param('username'));
+        db.close();
     });
 
 });
