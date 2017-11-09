@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res){
     //res.writeHead(200, {'Content-Type': 'text/html'});
     var MongoClient = require('mongodb').MongoClient;
-    var url = "mongodb://heroku_1jbzqctc:&7c4fPwVBcUDTcu1@ds251245.mlab.com:51245/heroku_1jbzqctc";
+    var url = "mongodb://heroku_1jbzqctc:Holleriv12@ds251245.mlab.com:51245/heroku_1jbzqctc";
 
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
