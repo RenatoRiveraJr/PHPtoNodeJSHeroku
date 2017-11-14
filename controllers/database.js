@@ -9,7 +9,7 @@ module.exports.getAllOrders =  function (request, response) {
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
         db.collection('ORDERS').find().toArray(function(err, docs) {
-            response.render('getAllRoutes', {results: docs});
+            response.render('getAllOrders', {results: docs});
         });
     });
 
