@@ -6,14 +6,13 @@
 </head>
 <body>
 <h1>ORDERS</h1>
-<% for (var i = 0; i < results.length; i++) { %>
-<li>
-    <div>
-        <span style="text-align:left">
-            <%= results[i] %>
-        </span>
-    </div>
-</li>
-<% } %>
+<div class="container">
+    <h2>Database Results getting Orders </h2>
+    <ul>
+        <% results.forEach(function(r) { %>
+        <li><%=r %></li>
+        <% }); %>
+    </ul>
+</div>
 </body>
 </html>
