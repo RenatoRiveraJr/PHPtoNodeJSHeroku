@@ -2,7 +2,7 @@
  * Created by darthrahj on 11/14/17.
  */
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://r39rivera:Holleriv12@ds251245.mlab.com:51245/heroku_1jbzqctc";
+var url = "";
 
 module.exports.getAllOrders =  function (request, response) {
 
