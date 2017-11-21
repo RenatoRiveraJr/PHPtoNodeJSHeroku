@@ -1,0 +1,28 @@
+"CUSTOMER_ID": "001",
+    "BILLING_ID": "001",
+    "SHIPPING_ID": "001",
+    "DATE": "11/11",
+    "PRODUCT_VECTOR": [
+        {
+            "ProductID_1": "001",
+            "Quantity1": "1",
+            "Price1": "12",
+            "Color1": "Blue",
+            "Size1": "5"
+        },
+        {
+            "ProductID_2": "002",
+            "Quantity2": "1",
+            "Price2": "10",
+            "Color2": "Red",
+            "Size2": "3"
+        },
+        {
+            "ProductID_3": "003",
+            "Quantity3": "1",
+            "Price3": "5",
+            "Color3": "Orange",
+            "Size3": "4"
+        }
+    ],
+    "ORDER_TOTAL": "1234"
